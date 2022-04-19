@@ -1,0 +1,15 @@
+{
+  "name": "fivem-javascript-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to build resources for fivem with javascript",
+  "main": "index.js",
+  "author": "Fran Fernández",
+  "license": "MIT",
+  "type": "module", 
+  "scripts": {
+    "build": "node delete_dist.js && esbuild client/main.js server/main.js --bundle --external:./node_modules/* --minify --platform=node --outdir=dist"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.36"
+  }
+}
